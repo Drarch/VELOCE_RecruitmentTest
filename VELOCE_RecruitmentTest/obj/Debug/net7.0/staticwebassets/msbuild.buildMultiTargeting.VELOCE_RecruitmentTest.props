@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\VELOCE_RecruitmentTest.props" />
+</Project>

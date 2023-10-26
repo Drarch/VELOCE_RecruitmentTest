@@ -1,0 +1,65 @@
+﻿@page
+@model EditFormModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="text-left">
+    <h1 class="display-6">Edit</h1>
+</div>
+
+<div>
+    <div>
+        @if (Model.Row != null)
+        {
+            <form method="post" class="mt-3" asp-for="Row" >
+                <input hidden asp-for="Row.RowID" />
+
+                <div asp-validation-summary="All" class="text-danger" ></div>
+            
+                <div class="form-group row" >
+                    <label asp-for="Row.FirstName" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input asp-for="Row.FirstName" class="form-control" placeholder="First Name" maxlength="50" />
+                        <span asp-validation-for="Row.FirstName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="Row.LastName" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input asp-for="Row.LastName" class="form-control" placeholder="Last Name" manifest="150" />
+                        <span asp-validation-for="Row.LastName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="Row.BirthDate" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                         <input asp-for="Row.BirthDate" class="form-control" placeholder="Birth Date" />
+                        <span asp-validation-for="Row.BirthDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="Row.Sex" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <select asp-for="Row.Sex" class="custom-select mr-sm-2" asp-items="Html.GetEnumSelectList<Models.Enums.ESex>()">                            
+                        </select>
+                        <span asp-validation-for="Row.Sex" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button class="btn btn-success" type="submit">Save</button>
+                        <a class="btn btn-primary" asp-page="/Index">Back</a>
+                    </div>
+                </div>
+            </form>
+        }
+        else
+        {
+            <div>
+                <a class="btn btn-primary" asp-page="../Index">Back</a>
+            </div>
+        }
+    </div>
+    
+</div>

@@ -1,0 +1,16 @@
+﻿@page
+@model VELOCE_RecruitmentTest.Pages.Rows.DeleteConfirmationModel
+@{
+}
+
+<div class="text-left">
+    <h1 class="display-6">Delete @Model.Row.FirstName</h1>
+</div>
+
+<div class="alert alert-danger">
+    <h5>Are you sure to delete row: @Model.Row.FirstName</h5>
+    <form method="post">
+        <button type="submit" class="btn btn-danger">Yes</button>
+        <a class="btn btn-primary" asp-page="/Index">No</a>
+    </form>
+</div>

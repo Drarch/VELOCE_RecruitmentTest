@@ -1,0 +1,65 @@
+﻿@using VELOCE_RecruitmentTest.Data;
+
+﻿@model IEnumerable<RowDataModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-left">
+    <h1 class="display-6">Data</h1>
+</div>
+<div>
+    @Html.ActionLink("Create New", "Create")
+</div>
+<div>
+    @if (Model.data != null && Model.data.Count > 0)
+    {
+        <table class="table">
+            <tr>
+                @* <td>
+            Id
+            </td> *@
+                <td>
+                    @Html.DisplayNameFor(modelItem => model.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayNameFor(modelItem => Model.data[0].LastName)
+                </td>
+                <td>
+                    @Html.DisplayNameFor(modelItem => Model.data[0].BirthDate)
+                </td>
+                <td>
+                    @Html.DisplayNameFor(modelItem => Model.data[0].Sex)
+                </td>
+
+                @* <td>
+            @Html.ActionLink("Orders", "Index", "Order",  new { customerid = item.RowID }, null)
+            </td> *@
+            </tr>
+            @foreach (Data.RowData item in Model.data)
+            {
+                <tr>
+                    @* <td>
+            @Html.DisplayFor(modelItem => item.RowID)
+            </td> *@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BirthDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sex)
+                    </td>
+
+                    @* <td>
+            @Html.ActionLink("Orders", "Index", "Order",  new { customerid = item.RowID }, null)
+            </td> *@
+                </tr>
+            }
+        </table>
+    }
+</div>

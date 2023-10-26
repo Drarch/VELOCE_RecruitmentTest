@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "VELOCE_RecruitmentTest/1.0.0": {
+        "dependencies": {
+          "VELOCE_RecruitmentTest.Models": "1.0.0",
+          "VELOCE_RecruitmentTest.Services": "1.0.0"
+        },
+        "runtime": {
+          "VELOCE_RecruitmentTest.dll": {}
+        }
+      },
+      "VELOCE_RecruitmentTest.Models/1.0.0": {
+        "runtime": {
+          "VELOCE_RecruitmentTest.Models.dll": {}
+        }
+      },
+      "VELOCE_RecruitmentTest.Services/1.0.0": {
+        "dependencies": {
+          "VELOCE_RecruitmentTest.Models": "1.0.0"
+        },
+        "runtime": {
+          "VELOCE_RecruitmentTest.Services.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "VELOCE_RecruitmentTest/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VELOCE_RecruitmentTest.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VELOCE_RecruitmentTest.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
